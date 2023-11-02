@@ -5,8 +5,6 @@
 //  Created by Kye Juana Avery on 9/5/23.
 //
 
-
-
 import UIKit
 import WebKit
 
@@ -25,7 +23,7 @@ class WebViewController: UIViewController {
     }
     
     func loadWebPage() {
-        if let myURL = url {
+        if let myURL = URL (string: "https://forms.gle/HGxUw2jEyF5GRUvi7") {
             
             let myRequest = URLRequest(url: myURL)
             web.load(myRequest)

@@ -98,7 +98,7 @@
                                 </constraints>
                             </imageView>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lkm-dK-l9a">
-                                <rect key="frame" x="0.0" y="59" width="393" height="543"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="499"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
@@ -125,7 +125,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dQ6-d5-KiN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3247" y="-32"/>
+            <point key="canvasLocation" x="4185.4961832061063" y="-70.422535211267615"/>
         </scene>
         <!--Chat-->
         <scene sceneID="9C8-n7-gDY">
@@ -203,10 +203,10 @@ Other platforms may charge for full access to their sites, but this site is comp
             </objects>
             <point key="canvasLocation" x="1753" y="389"/>
         </scene>
-        <!--Resources-->
+        <!--Find Help View Controller-->
         <scene sceneID="hfI-DX-XfO">
             <objects>
-                <viewController id="9R1-Ih-Y1h" customClass="ResourcesViewController" customModule="CanWeTalk" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9R1-Ih-Y1h" customClass="FindHelpViewController" customModule="CanWeTalk" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ysS-Cj-Jgu">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -231,6 +231,9 @@ Other platforms may charge for full access to their sites, but this site is comp
                                 <color key="tintColor" red="0.1823596492" green="0.067280111980000001" blue="0.34994050770000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Mayo Clinic"/>
+                                <connections>
+                                    <segue destination="h8L-HH-mtT" kind="show" id="7gI-YN-xhG"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yhm-FN-8Q0">
                                 <rect key="frame" x="58" y="390" width="276" height="35"/>
@@ -239,6 +242,9 @@ Other platforms may charge for full access to their sites, but this site is comp
                                 <color key="tintColor" red="0.1823596492" green="0.067280111980000001" blue="0.34994050770000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="American Psychiatric Association"/>
+                                <connections>
+                                    <segue destination="h8L-HH-mtT" kind="show" id="67M-LF-Sae"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GD2-hq-dIL">
                                 <rect key="frame" x="58" y="199" width="283" height="35"/>
@@ -248,14 +254,13 @@ Other platforms may charge for full access to their sites, but this site is comp
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="National Institute of Mental Health"/>
                                 <connections>
-                                    <action selector="resourceButtonPressed:" destination="9R1-Ih-Y1h" eventType="touchUpInside" id="dqI-De-vwq"/>
+                                    <segue destination="h8L-HH-mtT" kind="show" id="EwU-OG-VWY"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="YqR-tK-72a"/>
                         <color key="backgroundColor" red="0.87058818339999999" green="0.78039217000000005" blue="0.72156864399999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Resources" image="books.vertical" catalog="system" selectedImage="books.vertical.fill" id="qI6-VQ-chj"/>
                     <navigationItem key="navigationItem" id="6sk-Ur-hQW"/>
                     <connections>
                         <outlet property="apa" destination="Yhm-FN-8Q0" id="xMB-ey-oGG"/>
@@ -265,7 +270,7 @@ Other platforms may charge for full access to their sites, but this site is comp
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dVz-2u-ew1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2531" y="-162"/>
+            <point key="canvasLocation" x="3457.2519083969464" y="-162.67605633802819"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="ebp-QB-SJW">
@@ -282,7 +287,7 @@ Other platforms may charge for full access to their sites, but this site is comp
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="zvl-Xm-MRB"/>
                         <segue destination="Vgg-N2-pZd" kind="relationship" relationship="viewControllers" id="kJH-0Q-bdG"/>
                         <segue destination="KbQ-L7-5HJ" kind="relationship" relationship="viewControllers" id="Buq-Wf-XND"/>
-                        <segue destination="9R1-Ih-Y1h" kind="relationship" relationship="viewControllers" id="l10-1T-66O"/>
+                        <segue destination="ECM-xb-TXJ" kind="relationship" relationship="viewControllers" id="l10-1T-66O"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YJR-DC-5pH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -333,9 +338,31 @@ Other platforms may charge for full access to their sites, but this site is comp
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nua-LL-knz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3998" y="-2"/>
+            <point key="canvasLocation" x="4924.4274809160306" y="-2.1126760563380285"/>
+        </scene>
+        <!--Resources-->
+        <scene sceneID="uGJ-GE-hfb">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ECM-xb-TXJ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Resources" image="books.vertical" catalog="system" selectedImage="books.vertical.fill" id="qI6-VQ-chj"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0ev-hj-AUJ">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="9R1-Ih-Y1h" kind="relationship" relationship="rootViewController" id="m0h-o1-axG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EBG-eR-Mrp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2530.5343511450383" y="-162.67605633802819"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="67M-LF-Sae"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="5" width="500" height="500"/>
         <image name="books.vertical" catalog="system" width="128" height="107"/>
